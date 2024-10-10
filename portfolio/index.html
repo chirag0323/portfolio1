@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<!-- Website - www.codingnepalweb.com -->
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Responsive Portfolio Website HTML CSS| </title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Fontawesome CDN Link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+  <!-- Move to up button -->
+  <div class="scroll-button">
+    <a href="#home"><i class="fas fa-arrow-up"></i></a>
+  </div>
+  <!-- navgaition menu -->
+  <nav>
+    <div class="navbar">
+      <div class="logo"><a href="#">Portfolio.</a></div>
+      <ul class="menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <div class="cancel-btn">
+          <i class="fas fa-times"></i>
+        </div>
+      </ul>
+      <div class="media-icons">
+        <a href="https://www.facebook.com/chirag.galothra"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.linkedin.com/in/chirag-galotra-52252122b"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.instagram.com/chirag_galotra/"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="menu-btn">
+      <i class="fas fa-bars"></i>
+    </div>
+  </nav>
+
+  <!-- Home Section Start -->
+  <section class="home" id="home">
+    <div class="home-content">
+      <div class="text">
+        <div class="text-one">Hello,</div>
+        <div class="text-two">I'm Chirag Galotra</div>
+        <div class="text-three">Web Developer</div>
+        <div class="text-four">From Patiala,Punjab</div>
+      </div>
+      <div class="button">
+        <button onclick="document.getElementById('contactForm').style.display='block'">Hire Me</button>
+
+        <div id="contactForm" style="display:none;">
+            <form onsubmit="submitresponse(event)">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+            <script>
+              function submitresponse(event) {
+                  // Prevent the form from refreshing the page
+                  event.preventDefault();
+                  
+                  // Alert success message
+                  alert("Your response has been recorded successfully!");
+                  
+                  // Optionally, hide the form again after submission
+                  document.getElementById('contactForm').style.display = 'none';
+              }
+              </script>
+        </div>
+        
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section Start -->
+  <section class="about" id="about">
+    <div class="content">
+      <div class="title"><span>About Me</span></div>
+      <div class="about-details">
+        <div class="left">
+          <img src="images/about.jpg" alt="" />
+        </div>
+        <div class="right">
+          <div class="topic">Developing Is My Passion</div>
+          <p>
+            Web development is more than just a profession for me—it's my passion. The ability to create something from scratch, shaping
+             ideas into functional, beautiful websites, fuels my drive every day. I am fascinated by how code transforms into engaging 
+             user experiences, and I enjoy the challenge of keeping up with the ever-evolving technologies. Every project offers a
+              new opportunity to innovate, improve, and learn. Whether it’s front-end design or back-end logic, web development allows
+               me to blend creativity with problem-solving, making it a perfect outlet for my skills and interests.
+          </p>
+          <div class="button">
+           <a href="./Resume/CV.pdf" download="CV"   class="cv_button">
+            <button>Download CV</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- My Skill Section Start -->
+  <!-- Section Tag and Other Div will same where we need to put same CSS -->
+  <section class="skills" id="skills">
+    <div class="content">
+      <div class="title"><span>My Skills</span></div>
+      <div class="skills-details">
+        <div class="text">
+          <div class="topic">Skills Reflects Our Knowledge</div>
+          <p>Skills reflect our knowledge and expertise, showcasing the depth of our understanding in various fields. They are the 
+            practical application of what we have learned, and they demonstrate our ability to solve real-world problems. Through 
+            skills, we turn theory into practice, bridging the gap between learning and doing. Continuous improvement of our skills 
+            allows us to adapt to new challenges, stay relevant, and make meaningful contributions. In a fast-evolving world, skills
+             are the true measure of our competence and readiness to tackle any task or project that comes our way.</p>
+          <div class="experience">
+          
+          
+          </div>
+        </div>
+        <div class="boxes">
+          <div class="box">
+            <div class="topic">HTML</div>
+            <div class="per">90%</div>
+          </div>
+          <div class="box">
+            <div class="topic">CSS</div>
+            <div class="per">80%</div>
+          </div>
+          <div class="box">
+            <div class="topic">JavScript</div>
+            <div class="per">70%</div>
+          </div>
+          <div class="box">
+            <div class="topic">NODE JS</div>
+            <div class="per">60%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- My Services Section Start -->
+  <section class="services" id="services">
+    <div class="content">
+      <div class="title"><span>My Services</span></div>
+      <div class="boxes">
+        <div class="box">
+          <div class="icon">
+            <i class="fas fa-desktop"></i>
+          </div>
+          <div class="topic">Web Devlopment</div>
+          <p> Craft of building and maintaining websites, blending creativity with technical skill to create functional,
+             user-friendly digital experiences.</p>
+        </div>
+        <div class="box">
+          <div class="icon">
+            <i class="fas fa-paint-brush"></i>
+          </div>
+          <div class="topic">Graphic Design</div>
+          <p>Art of visual communication, combining typography, imagery, and color to convey ideas and messages effectively.</p>
+        </div>
+        <div class="box">
+          <div class="icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <div class="topic">Digital Marketing</div>
+          <p> Encompasses a variety of online strategies to connect with potential customers,
+             from crafting compelling content to optimizing search engine visibility.</p>
+        </div>
+        <div class="box">
+          <div class="icon">
+            <i class="fab fa-android"></i>
+          </div>
+          <div class="topic">Icon Design</div>
+          <p>Creating visually appealing and functional symbols that represent concepts, actions, or applications.</p>
+        </div>
+        <div class="box">
+          <div class="icon">
+            <i class="fas fa-camera-retro"></i>
+          </div>
+          <div class="topic">Photography</div>
+          <p>Captures moments in time, translating them into visual stories that evoke
+             emotions and preserve memories. It combines technical skill with artistic vision to create compelling images</p>
+        </div>
+        <div class="box">
+          <div class="icon">
+            <i class="fas fa-tablet-alt"></i>
+          </div>
+          <div class="topic">Apps Devlopment</div>
+          <p> Involves creating software applications for mobile or desktop platforms. 
+            It encompasses designing, coding, testing, and deploying apps to meet specific user needs or solve problems.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Me section Start -->
+  <section class="contact" id="contact">
+    <div class="content">
+      <div class="title"><span>Contact Me</span></div>
+      <div class="text">
+        <div class="topic">Have Any Project?</div>
+        <p>Do you have an idea for a project or need help with web development? Whether you're starting from scratch or need 
+          assistance with an ongoing project, I’m here to collaborate!</p>
+        
+          <div class="button">
+            <button onclick="document.getElementById('queryform').style.display='block'">LEAVE YOUR QUERY HERE ^_^</button>
+            
+            <div id="queryform" style="display:none;">
+                <form onsubmit="submitQuery(event)">
+                    <label for="query">Your Query</label>
+                    <textarea id="query" name="query" required></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+        
+        <script>
+        function submitQuery(event) {
+            // Prevent the form from refreshing the page
+            event.preventDefault();
+            
+            // Alert success message
+            alert("Your query has been submitted successfully!");
+            
+            // Optionally, hide the form again after submission
+            document.getElementById('queryform').style.display = 'none';
+        }
+        </script>
+        
+        
+         
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section Start -->
+  <footer>
+    <div class="text">
+      <span>Copyright © 2024 . All rights reserved. | Designed by  <a href="#">Chirag Galotra</a> </span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
